@@ -1,0 +1,42 @@
+2013-10-28 18:36:28,695 [http-bio-8080-exec-1] INFO  mainservice.ReleaseInfoService  - Enterd into get method of ReleaseInfoService
+2013-10-28 18:36:28,698 [http-bio-8080-exec-1] INFO  mainservice.ReleaseInfoService  - Returning list of releases from get method of ReleaseInfoService
+2013-10-28 18:36:28,705 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:28,707 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:28,708 [http-bio-8080-exec-1] INFO  mainservice.ReleaseInfoService  - Enterd into get method of ReleaseInfoService
+2013-10-28 18:36:28,711 [http-bio-8080-exec-1] INFO  mainservice.ReleaseInfoService  - Returning list of releases from get method of ReleaseInfoService
+2013-10-28 18:36:34,812 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,812 [http-bio-8080-exec-12] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,815 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,815 [http-bio-8080-exec-12] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,817 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,819 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,821 [http-bio-8080-exec-16] INFO  mainservice.DashboardInfoService  - Entered into getAllCreatedProject method of DashboardInfoService
+2013-10-28 18:36:34,825 [http-bio-8080-exec-16] INFO  mainservice.DashboardInfoService  - Returning list of projects getAllCreatedProject method of DashboardInfoService
+2013-10-28 18:36:34,833 [http-bio-8080-exec-18] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,834 [http-bio-8080-exec-13] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,837 [http-bio-8080-exec-13] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,837 [http-bio-8080-exec-18] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:34,838 [http-bio-8080-exec-13] INFO  userservice.GetUserService  - Entered into getAllUsers method of GetUserService
+2013-10-28 18:36:34,841 [http-bio-8080-exec-13] INFO  userservice.GetUserService  - Returning list of user from getAllUsers method of GetUserService
+2013-10-28 18:36:37,509 [http-bio-8080-exec-13] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:37,525 [http-bio-8080-exec-13] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:40,684 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:40,686 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:43,380 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:43,382 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,073 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,076 [http-bio-8080-exec-16] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,077 [http-bio-8080-exec-16] INFO  mainservice.DashboardInfoService  - Entered into getAllCreatedProject method of DashboardInfoService
+2013-10-28 18:36:55,078 [http-bio-8080-exec-18] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,078 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,080 [http-bio-8080-exec-18] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,081 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,081 [http-bio-8080-exec-18] INFO  mainservice.DashboardInfoService  - Entered into getAllAssignedTask method of DashboardInfoService
+2013-10-28 18:36:55,081 [http-bio-8080-exec-16] INFO  mainservice.DashboardInfoService  - Returning list of projects getAllCreatedProject method of DashboardInfoService
+2013-10-28 18:36:55,082 [http-bio-8080-exec-1] INFO  mainservice.DashboardInfoService  - Entered into getAllAssignedTask method of DashboardInfoService
+2013-10-28 18:36:55,084 [http-bio-8080-exec-18] INFO  mainservice.DashboardInfoService  - Returning list of tasks from getAllAssignedTask method of DashboardInfoService
+2013-10-28 18:36:55,085 [http-bio-8080-exec-1] INFO  mainservice.DashboardInfoService  - Returning list of tasks from getAllAssignedTask method of DashboardInfoService
+2013-10-28 18:36:55,115 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Entered into verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,116 [http-bio-8080-exec-1] INFO  userservice.CommonUserValidationService  - Returning true from verifySessionToken method of CommonUserValidationService
+2013-10-28 18:36:55,117 [http-bio-8080-exec-1] INFO  mainservice.DashboardInfoService  - Entered into getAllAssignedTask method of DashboardInfoService
+2013-10-28 18:36:55,120 [http-bio-8080-exec-1] INFO  mainservice.DashboardInfoService  - Returning list of tasks from getAllAssignedTask method of DashboardInfoService
