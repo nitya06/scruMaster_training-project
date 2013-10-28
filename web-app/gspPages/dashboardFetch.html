@@ -4,6 +4,7 @@
 <div>
     <div class="col-md-1">
     </div>
+<<<<<<< HEAD
 
     <div class="col-md-7 body-boder projectBox" style="margin-top:1%;margin-left:0%; background: #3B5998">
        
@@ -36,25 +37,45 @@
                     <center><font style="color: white;font-size: large">Assigned Tasks</font></center>
                 <font style="color: white;margin-top: -20px" class="pull-right">Filter By &nbsp; 
                 <select ng-model="selectedFilter" ng-model-onblur ng-change="getPageCount(selectedFilter)" >
+=======
+    <div class="col-md-7 body-boder projectBox" style="margin-top:1.8%;margin-left:0%; background: #3B5998">
+        <h2 align="center"><font style="font-family: cursive ;color: white; font-style: oblique" >Dashboard</font></h2>
+        <form>
+            <h4 align="center"><font style="color: white" >Assigned Tasks</font></h4>
+            <div align="right">
+                <font style="color: white" >Sort By &nbsp; </font>
+                <select ng-model="selectedFilter" ng-model-onblur ng-change="getPageCount(selectedFilter)">
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                     <option value="All">All</option>
                     <option value="Todo">Todo</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
                 </select>
+<<<<<<< HEAD
                 </font>
             </div>    
             
             
             <br>
+=======
+            </div><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
             <div align='center' class="body-boder projectBox" style="background: repeating-radial-gradient">
                 <div ng-init ="fetchCreatedProject()"></div>
                 <div ng-init ="fetchAssignedTasks('All',0,3)"></div> 
                 <div ng-init ="getPageCount('All')"></div>
                
+<<<<<<< HEAD
                 
 
                     <div ng-repeat="data in ArrayColor1" class="col-md-3">
                         <br>
+=======
+                <div  class="carousel slide" class="col-md-12" style="margin-bottom: 20%;">
+
+                    <div ng-repeat="data in ArrayColor1" class="col-md-3">
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <div class="divBox" style="background: #CCE5FF">
                             <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForEditTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a></div>
                             <div class="content" style="color: black"><b><h4>{{data.projectName}}</h4></b></div>
@@ -64,7 +85,11 @@
                         </div>
                     </div>  
                     <div ng-repeat="data in ArrayColor2" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <div class="divBox" style="background: #FFFF99">
                             <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForEditTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a> </div>
                             <div class="content" style="color: black"><b><h4>{{data.projectName}}</h4></b></div>
@@ -74,7 +99,11 @@
                         </div>
                     </div>   
                     <div ng-repeat="data in ArrayColor3" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <div class="divBox" style="background: #CCFF99">  <!--C8FE2E -->
                             <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForEditTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a> </div>
                             <div class="content" style="color: black"><b><h4>{{data.projectName}}</h4></b></div>
@@ -84,12 +113,17 @@
                         </div>
                         
                     </div> 
+<<<<<<< HEAD
                 
+=======
+                </div>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
  
             </div> 
            
         </form> 
         <br>
+<<<<<<< HEAD
         <div align="center">
              <ul class="pagination" ng-repeat="data in paginationArray">
 
@@ -98,12 +132,22 @@
                 </ul>
         </div>
      
+=======
+        <center>
+            <ul class="pagination" ng-repeat="data in paginationArray">
+               
+                <b> <a href ="" style="color: white" ng-model='nextPage' ng-click="fetchAssignedTasks(selectedFilterVar,data.startIndex,data.endIndex)">{{data.count}}</a> <b> &nbsp;
+               
+            </ul>
+        </center>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
     </div>
     
     <div class="col-md-1" style="margin-top:5.3%;margin-left:0%">       
     </div>
     <div class="col-md-3" style="margin-top:5.3%;margin-left:0%">
        
+<<<<<<< HEAD
         <div style="background-color: #3B5998" class="body-boder projectBox">
             
             <br>
@@ -126,6 +170,27 @@
               </div>
 
 
+=======
+        <div class="body-boder projectBox">
+            <div ng-init ="fetchCreatedProject()"></div>
+            <br>
+            <h3 align="center"><font  style="font-family: cursive; color: black;font-style: oblique ">My Projects</font></h3><br>
+            <br>
+            
+            <div ng-repeat="data in ArrayProject1"> 
+                &nbsp;&nbsp;<a data-toggle="modal" href="#myModalForUpdateProject" title="Update" ng-click="FetchDataForUpdateProject(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a> 
+                &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}/{{data.startDate}}/{{data.endDate}}"><b style="color: #F7819F">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
+            </div> 
+           
+            <div ng-repeat="data in ArrayProject2">                                                                
+                &nbsp;&nbsp;<a data-toggle="modal" href="#myModalForUpdateProject" title="Update" ng-click="FetchDataForUpdateProject(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a> 
+                &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}/{{data.startDate}}/{{data.endDate}}"><b style="color: #6495ED">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
+            </div> 
+            <div ng-repeat="data in ArrayProject3">                                                                
+                &nbsp;&nbsp;<a data-toggle="modal" href="#myModalForUpdateProject" title="Update"  ng-click="FetchDataForUpdateProject(data.id,data.name,data.desc,data.startDate,data.endDate)"><span align="right" class="glyphicon glyphicon-edit blue"></span> </a> 
+                &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}/{{data.startDate}}/{{data.endDate}}"><b style="color: #C8FE2E">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
+            </div> 
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
             <br>
 
             
@@ -133,6 +198,10 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 <!----------------------------------------MODEL HERE ------------------------------------------------------------------  -->
 <!-- project creation -----------------------------------------------------   -->
 <div class="modal" id="myModalForCreateProject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -212,7 +281,16 @@
                     </select>
 
 
+<<<<<<< HEAD
                     
+=======
+                    <label>Start Date </label><br>
+                    <input type ="date" id="startdate" readonly="true" ng-model="taskStartDate" class="form-control"><br>
+
+                    <label>End Date* </label><br>
+                    <input type ="date" min="{{taskStartDate}}" id="enddate" ng-model="taskEndDate" class="form-control" required=""><br>
+
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                     </div>
 
                     <div class="modal-footer">

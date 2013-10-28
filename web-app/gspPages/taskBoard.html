@@ -1,6 +1,10 @@
 <div style="margin-top:0.8%;margin-right: 0.9%" align="right">
+<<<<<<< HEAD
       <div><button data-toggle="modal" href="#myModalForCreateTask" class="css3button" class="btn btn-primary btn-lg">+ Create Task &nbsp; &nbsp;</button>&nbsp;
       <a href="#/allTaskBoard/{{projectID}}"><button data-toggle="modal" class="css3button" class="btn btn-primary btn-lg">&nbsp; View All Task</button></a></div><br>     
+=======
+      <div><button data-toggle="modal" href="#myModalForCreateTask" class="css3button" class="btn btn-primary btn-lg">+ Create Task &nbsp; &nbsp;</button></div><br>     
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 </div>
 <div>
     <div class="col-md-1" style="margin-top:5.3%;margin-left:0%">
@@ -8,6 +12,7 @@
     </div>
     <div class="col-md-7" class="body-boder projectBox" style="margin-top:1.8%;margin-left:0%; background: #3B5998">
         <form>
+<<<<<<< HEAD
             <h4 align="center"><font style="font-family: cursive ;color: white; font-style: oblique;font-size: 24px" ><b>Project : </b>{{projectNAME}}</font> </h4>
             <h4 align="center"><font style="font-family: cursive ;color: white; font-style: oblique;font-size: 24px" ><b>Release : </b>{{releaseNAME}}</font> </h4>
             <h4 align="center"><font style="font-family: cursive ;color: white; font-style: oblique;font-size: 24px" ><b>Tasks for : </b>{{sprintNAME}}</font> </h4>
@@ -33,6 +38,14 @@
 <br>
 <font style="color: white" >Filter By &nbsp; </font>
 <select ng-model="selectedFilter" ng-model-onblur ng-change="getPageCount(selectedFilter)">
+=======
+            <h4 align="center"><font style="color: white" ><b>Project : </b>{{projectNAME}}</font> </h4>
+            <h4 align="center"><font style="color: white" ><b>Release : </b>{{releaseNAME}}</font> </h4>
+            <h4 align="center"><font style="color: white" ><b>TASKS for </b>{{sprintNAME}}</font> </h4>
+                <div align="right">
+                 <font style="color: white" >Sort By &nbsp; </font>
+                <select ng-model="selectedFilter" ng-model-onblur ng-change="getPageCount(selectedFilter)">
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                     <option value="All">All</option>
                     <option value="Todo">Todo</option>
                     <option value="In Progress">In Progress</option>
@@ -49,11 +62,16 @@
 
 
                     <div ng-repeat="data in ArrayColor1" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         <div class="divBox" style="background: #CCE5FF">
 
 
+<<<<<<< HEAD
                             <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForUpdateTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.assignTo,data.userStory)"><span align="right" class="glyphicon glyphicon-edit blue"></span></a></div>
                             <div class="content" style="color: black"><b>{{data.name}}</b></div>
                             <div class="content" style="color: #0000FF">{{data.assignTo}}</div><br>
@@ -71,11 +89,29 @@
                             <div class="content" style="color: #0000FF">{{data.assignTo}}</div><br>
                             <div class="content" style="color: #0000FF">{{data.userStory}}</div><br>
                             <br>
+=======
+                            <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForUpdateTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate,data.assignTo,data.userStory)"><span align="right" class="glyphicon glyphicon-edit blue"></span></a></div>
+                            <div class="content" style="color: black"><b><a href="">{{data.name}}</a></b></div>
+                            <div class="content" style="color: #0000FF">({{data.startDate}})</div> -
+                            <div class="content" style="color: #0000FF">({{data.endDate}})</div><br>
+                        </div>
+                    </div>  
+                    <div ng-repeat="data in ArrayColor2" class="col-md-3">
+                        <br><br>
+
+                        <div class="divBox" style="background: #FFFF99">
+
+                            <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForUpdateTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate,data.assignTo,data.userStory)"><span align="right" class="glyphicon glyphicon-edit blue"></span></a></div>
+                            <div class="content" style="color: black"><b><a href="">{{data.name}}</a></b></div>
+                            <div class="content" style="color: #0000FF">({{data.startDate}})</div> -
+                            <div class="content" style="color: #0000FF">({{data.endDate}})</div><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         </div>
 
                     </div>   
                     <div ng-repeat="data in ArrayColor3" class="col-md-3">
+<<<<<<< HEAD
                         <br>
 
                         <div class="divBox" style="background: #CCFF99">
@@ -85,6 +121,16 @@
                             <div class="content" style="color: #0000FF">{{data.assignTo}}</div><br>
                             <div class="content" style="color: #0000FF">{{data.userStory}}</div><br>
                             <br>
+=======
+                        <br><br>
+
+                        <div class="divBox" style="background: #CCFF99">
+
+                            <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForUpdateTask" title="Update" ng-click="FetchDataForUpdateTask(data.id,data.name,data.desc,data.startDate,data.endDate,data.assignTo,data.userStory)"><span align="right" class="glyphicon glyphicon-edit blue"></span></a>  </div>
+                            <div class="content" style="color: black"><b><a href="">{{data.name}}</a></b></div>
+                            <div class="content" style="color: #0000FF">({{data.startDate}})</div> -
+                            <div class="content" style="color: #0000FF">({{data.endDate}})</div><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         </div>
                        
@@ -93,8 +139,12 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
         </form>  <br>
           
+=======
+        </form>  
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
          <center>
             <ul class="pagination" ng-repeat="data in paginationArray">
                
@@ -109,6 +159,7 @@
     <div class="col-md-3" style="margin-top:5.3%;margin-left:0%">
 
         
+<<<<<<< HEAD
         <div style="background-color: #3B5998" class="body-boder projectBox">
             <br>
             <h3 align="center"><font style="font-family: cursive;color: white;font-style: oblique" >My Projects</font></h3><br>
@@ -131,6 +182,19 @@
          </button>
            </div>
 <!--            <div ng-repeat="data in ArrayProject2">                                                                
+=======
+        <div class="body-boder projectBox">
+            <br>
+            <h3 align="center"><font style="font-family: cursive;color: black;font-style: oblique" >My Projects</font></h3><br>
+
+            <div ng-repeat="data in ArrayProject1"> 
+
+
+                &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #F7819F">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
+
+            </div> 
+            <div ng-repeat="data in ArrayProject2">                                                                
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                 &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #6495ED">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
 
@@ -140,7 +204,11 @@
 
                 &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #C8FE2E">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
 
+<<<<<<< HEAD
             </div>        -->
+=======
+            </div>        
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
         </div>
     </div>
 </div>
@@ -164,7 +232,10 @@
 
                     <textarea rows="3" cols="30" ng-model="taskDescription" class="form-control" placeholder="Description*" required="" >
                     </textarea><br>
+<<<<<<< HEAD
                     
+=======
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                     <label>Status* </label><br>
                     <select  ng-model="taskStatus" class="form-control"  required="">
                         <option value="Todo">Todo</option>
@@ -173,7 +244,11 @@
                  
                     <br>
                     <div ng-init="fetchUserStorysForSpecificSprint()">  
+<<<<<<< HEAD
                         <label>Add UserStory (optional)</label>
+=======
+                        <label>Add UserStory*</label>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <select ng-model="taskUserStorys" class="form-control"  required="" >
                             <option ng-repeat="items in userStorysArrayForSprint"> {{items.name}} </option>                                       
                         </select>
@@ -181,7 +256,11 @@
                     <br>
 
                             <div ng-init="fetchUsers()">  
+<<<<<<< HEAD
                                             <label>Assign To (optional)</label>
+=======
+                                            <label>Assign To</label>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                               
                                     <input  list="browsers" name="browser" class="form-control" ng-model="taskUsers" >
                                     <datalist  id="browsers" >
@@ -192,7 +271,16 @@
 
                     <br>
 
+<<<<<<< HEAD
                    
+=======
+                    <label>Start Date* </label><br>
+                    <input type ="date" id="startdate" min="{{startdate}}" max="{{enddate}}" ng-model="taskStartDate" class="form-control" required=""><br>
+
+                    
+                    <label>End Date* </label><br>
+                    <input type ="date" id="enddate" min="{{taskStartDate}}" max="{{enddate}}" ng-model="taskEndDate" class="form-control" required="">
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                     </div>
 
@@ -248,9 +336,14 @@
                     <select ng-model="taskUserStorys" class="form-control"  required="" >
                         <div ng-repeat="data in userStorysArray">
                             <option ng-repeat="items in userStorysArrayForSprint"> {{items.name}} </option>
+<<<<<<< HEAD
                            
                     </select>
                     <br>
+=======
+                   
+                    </select>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                      <label>Prev Assigned To</label><br>
                     <input type="text" readonly="" ng-model="prevAssign" class="form-control"><br>
 
@@ -264,7 +357,15 @@
                     </div>
 
 
+<<<<<<< HEAD
                     
+=======
+                    <label>Start Date* </label><br>
+                    <input type ="date" id="startdate" min="{{startdate}}" max="{{enddate}}" readonly="true" ng-model="taskStartDate" class="form-control" required=""><br>
+
+                    <label>End Date* </label><br>
+                    <input type ="date" id="enddate" min="{{taskStartDate}}" max="{{enddate}}" ng-model="taskEndDate" class="form-control" required=""><br>         
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                     </div>
 

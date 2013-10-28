@@ -24,3 +24,14 @@ class Task {
         description type: "text"
     }
 }
+        user nullable:true
+        sprint nullable:true
+        userStory nullable:true
+    }
+    
+     static mapping = {
+        autoTimestamp false
+        version false
+        description type: "text"
+    }
+}

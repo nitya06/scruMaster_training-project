@@ -1,8 +1,12 @@
     <div style="margin-top:0.8%;margin-right: 0.9%" align="right">    
         <div><button data-toggle="modal" href="#myModalForCreateRelease" class="css3button" class="btn btn-primary btn-lg">+ Create Release</button>&nbsp;
         <button data-toggle="modal" href="#myModalForUserStory" class="css3button" class="btn btn-primary btn-lg">+ Create Userstory</button>&nbsp;
+<<<<<<< HEAD
         <button data-toggle="modal" href="#myModalForTask" class="css3button" class="btn btn-primary btn-lg">&nbsp;+ Create Task &nbsp;</button>&nbsp;
         <a href="#/allTaskBoard/{{projectID}}"><button data-toggle="modal" class="css3button" class="btn btn-primary btn-lg">&nbsp; View All Task</button></a></div>
+=======
+        <button data-toggle="modal" href="#myModalForTask" class="css3button" class="btn btn-primary btn-lg">&nbsp;+ Create Task &nbsp;</button></div>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
     </div>
 
 <div>
@@ -10,6 +14,7 @@
     <div class="col-md-1" style="margin-top:5.3%;margin-left:0%">
 
     </div>
+<<<<<<< HEAD
     <div class="col-md-7" class="body-boder projectBox" style="margin-top:1%;margin-left:0%; background: #3B5998">
         
             <div align="center" style="margin-top: 10px">  <font style="font-family: cursive ;color: white; font-style: oblique;font-size: 24px" ><b>Releases for Project : </b>{{projectNAME}} </font>
@@ -32,6 +37,14 @@
         <form>
             <div align="right">
                  <font style="color: white" >Filter By &nbsp; </font>
+=======
+    <div class="col-md-7" class="body-boder projectBox" style="margin-top:1.8%;margin-left:0%; background: #3B5998">
+        <form>
+            <h4 align="center"><font style="color: white" ><b>Releases for Project : </b>{{projectNAME}}</font> </h4>
+
+            <div align="right">
+                 <font style="color: white" >Sort By &nbsp; </font>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                 <select ng-model="selectedFilter" ng-model-onblur ng-change="getPageCount(selectedFilter)">
                     <option value="All">All</option>
                     <option value="Todo">Todo</option>
@@ -46,7 +59,11 @@
                 <div  class="col-md-12" style="margin-bottom: 20%;">
 
                     <div ng-repeat="data in ArrayColor1" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         <div class="divBox" style="background: #CCE5FF">
 
@@ -62,7 +79,11 @@
 
                     </div>  
                     <div ng-repeat="data in ArrayColor2" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         <div class="divBox" style="background: #FFFF99">
 
@@ -75,7 +96,11 @@
 
                     </div>   
                     <div ng-repeat="data in ArrayColor3" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         <div class="divBox" style="background: #CCFF99">
 
@@ -88,13 +113,18 @@
                 </div>
             </div>
         </form> 
+<<<<<<< HEAD
   
+=======
+         
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
         <center>
             <ul class="pagination" ng-repeat="data in paginationArray">
                
                 <b> <a href ="" style="color: white" ng-click="fetchCreatedReleases(selectedFilterVar,data.startIndex,data.endIndex)">{{data.count}}</a> <b> &nbsp;
                
             </ul>
+<<<<<<< HEAD
             <br><div style="margin-top: -10px"><font style="font-family: cursive ;color: white; font-style: oblique;font-size: 24px" ><b>UserStories for Project : </b>{{projectNAME}} </font></div>
         </center>
 
@@ -102,11 +132,26 @@
 
             <div align='center' class="body-boder projectBox" style="background: repeating-radial-gradient">   
                 <div ng-init="fetchUserStorysForSpecificProject(0,3)"></div>
+=======
+        </center>
+        
+        <form>
+
+            <h4 align="center"><font style="color: white" ><b>UserStorys for Project : </b>{{projectNAME}}</font> </h4>
+
+
+            <div align='center' class="body-boder projectBox" style="background: repeating-radial-gradient">   
+                
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                 <div ng-init="getPageCountForUserStory()"></div>
                 <div  class="col-md-12" style="margin-bottom: 20%;">
 
                     <div ng-repeat="data in projectUserStoryss" class="col-md-3">
+<<<<<<< HEAD
                         <br>
+=======
+                        <br><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                         <div class="divBoxForUserStory" style="background: #C0C0C0">
                             <div align="left" style="color: black"><a data-toggle="modal" href="#myModalForUserStoryUpdate" title="Update" ng-click="FetchDataForUpdateUserStory(data.id,data.name,data.desc)"><span align="right" class="glyphicon glyphicon-edit blue"></span></a></div>
@@ -119,6 +164,7 @@
                 </div>
                    
             </div>
+<<<<<<< HEAD
              <center>
                   <ul class="pagination" ng-repeat="data in paginationArrayForUserStory">
 
@@ -127,6 +173,16 @@
                   </ul>
             </center>
         
+=======
+                    <center>
+                        <ul class="pagination" ng-repeat="data in paginationArrayForUserStory">
+
+                            <b> <a href ="" style="color: white" ng-click="fetchUserStorysForSpecificProject(data.startIndex,data.endIndex)">{{data.count}}</a> <b> &nbsp;
+
+                        </ul>
+                    </center>
+        </form>  
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
         
     </div>
 
@@ -136,6 +192,7 @@
     <div class="col-md-3" style="margin-top:5.3%;margin-left:0%">
 
         
+<<<<<<< HEAD
         <div style="background-color: #3B5998" class="body-boder projectBox">
             <br>
             <h3 align="center"><font style="font-family: cursive;color: white; font-style: oblique" >My Projects</font></h3><br>
@@ -159,6 +216,19 @@
               </div>
 
 <!--            <div ng-repeat="data in ArrayProject2">                                                                
+=======
+        <div class="body-boder projectBox">
+            <br>
+            <h3 align="center"><font style="font-family: cursive;color: black; font-style: oblique" >My Projects</font></h3><br>
+
+            <div ng-repeat="data in ArrayProject1"> 
+
+
+                &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #F7819F">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
+
+            </div> 
+            <div ng-repeat="data in ArrayProject2">                                                                
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                 &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #6495ED">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
 
@@ -168,7 +238,11 @@
 
                 &nbsp;<a href="#/releaseBoard/{{data.id}}/{{data.name}}"><b style="color: #C8FE2E">{{data.name}}</b></a> ( {{data.startDate}} &nbsp; - &nbsp;{{data.endDate}}) 
 
+<<<<<<< HEAD
             </div> -->
+=======
+            </div> 
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
             <br>
 
         </div>
@@ -205,7 +279,11 @@
 
                     <br>
                     <label>Add UserStory* </label><br>
+<<<<<<< HEAD
                     <select size="4" style="width: 150px" required="" id="myselection" multiple ng-multiple="true" ng-model="selectedUserStorys" ng-options="data.name for data in UserStoryforProject"></select><br>
+=======
+                    <select size="4" required="" id="myselection" multiple ng-multiple="true" ng-model="selectedUserStorys" ng-options="data.name for data in UserStoryforProject"></select><br>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
 
                     <br><label>Start Date* </label><br>
                     <input type ="date" min="{{startdate}}" max="{{enddate}}" id="startdate" ng-model="releaseStartDate" class="form-control" required=""><br>
@@ -352,21 +430,33 @@
                     </select>
 
                     <br>
+<<<<<<< HEAD
                      <label>Release (optional)</label>
+=======
+                     <label>Release*</label>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <select ng-model="selectedRelease" ng-model-onblur ng-change="fetchSprintsForSpecificRelease()" class="form-control"  required="">
                             <option ng-repeat="items in availableRelease">{{items.name}}</option>
                         </select>
                     
                     <br>
                     
+<<<<<<< HEAD
                     <label>Sprint (optional)</label> 
+=======
+                    <label>Sprint*</label> 
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <select ng-model="selectedSprint" ng-model-onblur ng-change="fetchUserStoriesForSpecificSprint()"  class="form-control"  required="" >
                             <option ng-repeat="items in availableSprint">{{items.name}}</option>                                     
                         </select>
                     <br>
 
                     
+<<<<<<< HEAD
                         <label>Add UserStory (optional)</label>
+=======
+                        <label>Add UserStory*</label>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                         <select ng-model="taskUserStories" class="form-control"  required="" >
                             <option ng-repeat="items in availableUserStories"> {{items.name}} </option>                                       
                         </select>
@@ -374,7 +464,11 @@
                     
                     <br>
                     <div ng-init="fetchUsers()">  
+<<<<<<< HEAD
                                             <label>Assign To (optional)</label>
+=======
+                                            <label>Assign To</label>
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                               
                                     <input  list="browsers" name="browser" class="form-control" ng-model="taskUsers" >
                                     <datalist  id="browsers" >
@@ -383,6 +477,18 @@
                               
                     </div>
 
+<<<<<<< HEAD
+=======
+                    
+                    <br>
+
+                    <label>Start Date* </label><br>
+                    <input type ="date" min="{{sDate}}" max="{{eDate}}" id="startdate" ng-model="taskStartDate" class="form-control" required=""><br>
+
+                    <label>End Date* </label><br>
+                    <input type ="date" min="{{taskStartDate}}"  max="{{eDate}}" id="enddate" ng-model="taskEndDate" class="form-control" required="">
+
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
                     </div>
 
                     <div class="modal-footer">

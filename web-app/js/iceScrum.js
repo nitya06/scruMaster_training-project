@@ -17,12 +17,18 @@ $(document).ready(function () {
        if ($('#lblError').css('display') != 'none') {
            $('#lblError').hide('slow');
        }
+<<<<<<< HEAD
        
         
    }, 2000);
    
      
    
+=======
+      
+   }, 2000);
+   
+>>>>>>> 05758a3a285b0875079fe0ccd807fb34ff5264a6
     //Validations
     //Email Validation
     

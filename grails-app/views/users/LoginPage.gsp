@@ -229,3 +229,423 @@ function isPasswordValid()
     
   </body>
 </html>
+    <!--linking with separate iceScrum.js file -->
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'iceScrum.js')}"></script>
+   
+    <!--linking with separate iceScrum.css file -->    
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'iceScrum.css')}" type="text/css">
+    
+    
+    <script type="text/javascript" >
+      $(document).ready(function(){
+         setTimeout(function(){
+         $(".flash").fadeOut("slow", function () {
+         $(".flash").remove();
+      }); }, 2000);
+      });
+    </script>
+
+    <style type="text/css">
+      
+      
+      .divBox {
+    width:35em;
+    height:30em;
+    
+    overflow:hidden;
+    
+    box-shadow:4px 4px 8px #1c1c1c;
+    -webkit-box-shadow:4px 4px 8px #1c1c1c;
+    -moz-box-shadow:4px 4px 8px #1c1c1c;
+    -o-box-shadow:4px 4px 8px #1c1c1c;
+    margin-bottom: 20px;
+}
+    </style>
+    
+    
+    
+    
+    
+
+
+    <style type="text/css">
+      .flash{
+          width:759px;
+          padding-top:8px;
+          padding-bottom:8px;
+          background-color: #fff;
+          font-weight:bold;
+          font-size:20px;-moz-border-radius: 6px;-webkit-border-radius: 6px;
+
+        }
+</style>
+
+
+<!--// added by Rachit for validation of email id on sign up-->
+
+<script type="text/javascript">
+   function isSignUpEmailValid()
+{
+  
+
+var xmlhttp;
+var k=document.getElementById("signUpEmail").value;
+var urls="http://10.132.160.215:8080/iceScrum/users/checkMailSignUp?email="+k;
+ 
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4)
+    {
+      if(xmlhttp.status=="200")
+        {
+        document.getElementById("err").innerHTML=xmlhttp.responseText;
+        $('#signUpEmail').css('background-color', 'white');
+        document.getElementById("signUpEmail").value=""  
+        
+        }
+        else{
+          document.getElementById("err").innerHTML=xmlhttp.responseText;
+          
+           }
+    }
+  }
+xmlhttp.open("GET",urls,true);
+xmlhttp.send();
+}
+  
+
+function isPasswordValid()
+{
+  var k=document.getElementById("signUpPassword").value;
+  if(k!='')
+   {
+  if(k.length<6)
+    {
+      document.getElementById("errorForInvalidPassword").innerHTML= "Password should be atleast 6 characters";
+      $('#signUpPassword').css('background-color', 'white');
+       document.getElementById("signUpPassword").value=""
+         
+    }
+    else
+      document.getElementById("errorForInvalidPassword").innerHTML= "";
+   }
+}
+</script>
+
+  </head>
+  <body>
+     
+     <!--images inserted  -->
+    <img  src="${resource(dir: 'images', file: 'image1.jpg')}" class="img1" alt="responsive-image"/>
+    <div >
+      &nbsp; &nbsp; &nbsp; &nbsp; <img  src="${resource(dir: 'images', file: 'scrum_1.png')}"  width="150px" height="30px" alt="responsive-image"/>
+   </div> <br>
+     <!--header -->
+    <div class="page-header" style="margin-top:-3%">
+      <center>
+      <h1 style="color:#2cb544"> <small></small></h1>
+      </center>
+    </div>
+   
+    
+    
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4" >
+             
+            
+          <!--Sign Up form-->
+          <div class="divBox">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+         <g:form controller="Users" action="addData" onsubmit="return ValidateUserRecord();">
+          <h2 align="center" style="color:#19e1df;">Sign Up</h2>
+          <input type="text" name="name" id="signUpName" class="form-control" placeholder="Name*"  >
+          
+    
+          <br>
+          <div id="lblNameError" class="alert alert-info" style="display:none"></div>  
+          <input type="text" name="email" id="signUpEmail" class="form-control" placeholder="Email Address*" onblur="isSignUpEmailValid()" >
+      
+          <h5 id="err" style="color:red"></h5>
+                   
+          <br>
+          <div id="lblEmailError" class="alert alert-info" style="display:none"></div>
+          <input type="password" name="password" id="signUpPassword" class="form-control "  placeholder="Password*" onblur="isPasswordValid()">
+          <h5 id="errorForInvalidPassword" style="color:red"></h5><br>
+          <div id="lblPasswordError" class="alert alert-info" style="display:none"></div>
+          <input type="password" id="signUpConfirmPassword" class="form-control "  placeholder="Confirm Password*" >
+          <div id="lblConfirmPasswordError" class="alert alert-info" style="display:none"></div><br>
+          
+          
+           <div class="container">
+                 <div class="col-md-6" style="margin-left:-13%">
+          <button class="btn btn-sm btn-primary btn-block" type="submit">Sign up</button>
+                 </div></div>
+        </g:form> 
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        </div>
+          
+        <div class="col-md-2">
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class='flash'> <center>${flash.message}</center></div>
+        </div>
+        
+        
+        
+        
+        <div class="col-md-4">
+          <div class="divBox">
+           <!--Sign In form-->
+           <div class="col-md-2"></div>
+           <div class="col-md-8">
+          <g:form controller="Users" action="verifySignIn" onsubmit="return ValidateSignIn();">
+              <h2 align="center" style="color:#19e1df;" >Sign in</h2>
+              <input id="signInEmail" name="email" type="text" class="form-control" placeholder="Email address" autofocus>
+              <br>
+             <input id="signInPassword" name="password" type="password" class="form-control" placeholder="Password" >
+             <br>
+             <div class="container">
+                 <div class="col-md-6" style="margin-left:-13%">
+                   <button class="btn btn-sm btn-primary btn-block"  type="submit">Sign in</button>
+            </div></div>
+                 <a  href="http://localhost:8080/iceScrum/users/enterEmail"><label style="margin-top:6%">Forgot Password?</label></a>
+                 <div id="lblError" class="alert alert-info" style="display:none"></div>
+          </g:form>
+             </div>
+           <div class="col-md-2"></div>
+          </div>
+        </div>
+      <div class="col-md-1"></div>
+      </div>
+    
+
+    <!--footer -->
+    <br>
+    <div class="page-footer " style="margin-top:11%">
+      <center>
+      <h1> <small></small></h1>
+      </center>
+    </div>
+    
+  </body>
+</html>
+    <!--linking with separate iceScrum.js file -->
+    <script type="text/javascript" src="${resource(dir: 'js', file: 'iceScrum.js')}"></script>
+   
+    <!--linking with separate iceScrum.css file -->    
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'iceScrum.css')}" type="text/css">
+    
+    
+    <script type="text/javascript" >
+      $(document).ready(function(){
+         setTimeout(function(){
+         $(".flash").fadeOut("slow", function () {
+         $(".flash").remove();
+      }); }, 2000);
+      });
+    </script>
+
+    <style type="text/css">
+      
+      
+      .divBox {
+    width:35em;
+    height:30em;
+    
+    overflow:hidden;
+    
+    box-shadow:4px 4px 8px #1c1c1c;
+    -webkit-box-shadow:4px 4px 8px #1c1c1c;
+    -moz-box-shadow:4px 4px 8px #1c1c1c;
+    -o-box-shadow:4px 4px 8px #1c1c1c;
+    margin-bottom: 20px;
+}
+    </style>
+    
+    
+    
+    
+    
+
+
+    <style type="text/css">
+      .flash{
+          width:759px;
+          padding-top:8px;
+          padding-bottom:8px;
+          background-color: #fff;
+          font-weight:bold;
+          font-size:20px;-moz-border-radius: 6px;-webkit-border-radius: 6px;
+
+        }
+</style>
+
+
+<!--// added by Rachit for validation of email id on sign up-->
+
+<script type="text/javascript">
+   function isSignUpEmailValid()
+{
+  
+
+var xmlhttp;
+var k=document.getElementById("signUpEmail").value;
+var urls="http://10.132.160.215:8080/iceScrum/users/checkMailSignUp?email="+k;
+ 
+if (window.XMLHttpRequest)
+  {
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4)
+    {
+      if(xmlhttp.status=="200")
+        {
+        document.getElementById("err").innerHTML=xmlhttp.responseText;
+        $('#signUpEmail').css('background-color', 'white');
+        document.getElementById("signUpEmail").value=""  
+        
+        }
+        else{
+          document.getElementById("err").innerHTML=xmlhttp.responseText;
+          
+           }
+    }
+  }
+xmlhttp.open("GET",urls,true);
+xmlhttp.send();
+}
+  
+
+function isPasswordValid()
+{
+  var k=document.getElementById("signUpPassword").value;
+  if(k!='')
+   {
+  if(k.length<6)
+    {
+      document.getElementById("errorForInvalidPassword").innerHTML= "Password should be atleast 6 characters";
+      $('#signUpPassword').css('background-color', 'white');
+       document.getElementById("signUpPassword").value=""
+         
+    }
+    else
+      document.getElementById("errorForInvalidPassword").innerHTML= "";
+   }
+}
+</script>
+
+  </head>
+  <body>
+     
+     <!--images inserted  -->
+    <img  src="${resource(dir: 'images', file: 'image1.jpg')}" class="img1" alt="responsive-image"/>
+    <div >
+      &nbsp; &nbsp; &nbsp; &nbsp; <img  src="${resource(dir: 'images', file: 'scrum_1.png')}"  width="150px" height="30px" alt="responsive-image"/>
+   </div> <br>
+     <!--header -->
+    <div class="page-header" style="margin-top:-3%">
+      <center>
+      <h1 style="color:#2cb544"> <small></small></h1>
+      </center>
+    </div>
+   
+    
+    
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4" >
+             
+            
+          <!--Sign Up form-->
+          <div class="divBox">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+         <g:form controller="Users" action="addData" onsubmit="return ValidateUserRecord();">
+          <h2 align="center" style="color:#19e1df;">Sign Up</h2>
+          <input type="text" name="name" id="signUpName" class="form-control" placeholder="Name*"  >
+          
+    
+          <br>
+          <div id="lblNameError" class="alert alert-info" style="display:none"></div>  
+          <input type="text" name="email" id="signUpEmail" class="form-control" placeholder="Email Address*" onblur="isSignUpEmailValid()" >
+      
+          <h5 id="err" style="color:red"></h5>
+                   
+          <br>
+          <div id="lblEmailError" class="alert alert-info" style="display:none"></div>
+          <input type="password" name="password" id="signUpPassword" class="form-control "  placeholder="Password*" onblur="isPasswordValid()">
+          <h5 id="errorForInvalidPassword" style="color:red"></h5><br>
+          <div id="lblPasswordError" class="alert alert-info" style="display:none"></div>
+          <input type="password" id="signUpConfirmPassword" class="form-control "  placeholder="Confirm Password*" >
+          <div id="lblConfirmPasswordError" class="alert alert-info" style="display:none"></div><br>
+          
+          
+           <div class="container">
+                 <div class="col-md-6" style="margin-left:-13%">
+          <button class="btn btn-sm btn-primary btn-block" type="submit">Sign up</button>
+                 </div></div>
+        </g:form> 
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        </div>
+          
+        <div class="col-md-2">
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class='flash'> <center>${flash.message}</center></div>
+        </div>
+        
+        
+        
+        
+        <div class="col-md-4">
+          <div class="divBox">
+           <!--Sign In form-->
+           <div class="col-md-2"></div>
+           <div class="col-md-8">
+          <g:form controller="Users" action="verifySignIn" onsubmit="return ValidateSignIn();">
+              <h2 align="center" style="color:#19e1df;" >Sign in</h2>
+              <input id="signInEmail" name="email" type="text" class="form-control" placeholder="Email address" autofocus>
+              <br>
+             <input id="signInPassword" name="password" type="password" class="form-control" placeholder="Password" >
+             <br>
+             <div class="container">
+                 <div class="col-md-6" style="margin-left:-13%">
+                   <button class="btn btn-sm btn-primary btn-block"  type="submit">Sign in</button>
+            </div></div>
+                 <a  href="http://localhost:8080/iceScrum/users/enterEmail"><label style="margin-top:6%">Forgot Password?</label></a>
+                 <div id="lblError" class="alert alert-info" style="display:none"></div>
+          </g:form>
+             </div>
+           <div class="col-md-2"></div>
+          </div>
+        </div>
+      <div class="col-md-1"></div>
+      </div>
+    
+
+    <!--footer -->
+    <br>
+    <div class="page-footer " style="margin-top:11%">
+      <center>
+      <h1> <small></small></h1>
+      </center>
+    </div>
+    
+  </body>
+</html>
